@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Happy';
+  src: url('/assets/fonts/Sweet-Toffee.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halloween';
+  src: url('/assets/fonts/Halloween.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Signika';
+  src: url('/assets/fonts/Happy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+/* Background transitions */
+.bg-peach-stage1 {
+  background-color: #FFDAB9;
+  transition: background-color 4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bg-peach-active {
+  animation: peach_alive linear 8s infinite;
+}
+
+@keyframes peach_alive {
+  0% {
+    background-color: #FFDAB9;
+  }
+  25% {
+    background-color: #FFE4B5;
+  }
+  50% {
+    background-color: #FFDAB9;
+  }
+  75% {
+    background-color: #FFEFD5;
+  }
+  100% {
+    background-color: #FFDAB9;
+  }
+}
+
+/* Bulbs & Bulb Glow Keyframes */
+@keyframes bulb_glow_yellow {
+  0% { opacity: 0.3; filter: drop-shadow(0 0 0px #ffe066); }
+  50% { opacity: 1; filter: drop-shadow(0 0 25px #ffd43b); }
+  100% { opacity: 1; filter: drop-shadow(0 0 20px #ffd43b); }
+}
+
+@keyframes bulb_glow_yellow_after {
+  0% { opacity: 0.4; filter: drop-shadow(0 0 5px #ffd43b); }
+  50% { opacity: 1; filter: drop-shadow(0 0 35px #ffd43b); }
+  100% { opacity: 0.4; filter: drop-shadow(0 0 5px #ffd43b); }
+}
+
+@keyframes bulb_glow_red_after {
+  0% { opacity: 0.4; filter: drop-shadow(0 0 5px #ff6b6b); }
+  50% { opacity: 1; filter: drop-shadow(0 0 35px #fa5252); }
+  100% { opacity: 0.4; filter: drop-shadow(0 0 5px #ff6b6b); }
+}
+
+@keyframes bulb_glow_blue_after {
+  0% { opacity: 0.4; filter: drop-shadow(0 0 5px #4dabf7); }
+  50% { opacity: 1; filter: drop-shadow(0 0 35px #339af0); }
+  100% { opacity: 0.4; filter: drop-shadow(0 0 5px #4dabf7); }
+}
+
+@keyframes bulb_glow_green_after {
+  0% { opacity: 0.4; filter: drop-shadow(0 0 5px #51cf66); }
+  50% { opacity: 1; filter: drop-shadow(0 0 35px #40c057); }
+  100% { opacity: 0.4; filter: drop-shadow(0 0 5px #51cf66); }
+}
+
+@keyframes bulb_glow_pink_after {
+  0% { opacity: 0.4; filter: drop-shadow(0 0 5px #f06595); }
+  50% { opacity: 1; filter: drop-shadow(0 0 35px #e64980); }
+  100% { opacity: 0.4; filter: drop-shadow(0 0 5px #f06595); }
+}
+
+@keyframes bulb_glow_orange_after {
+  0% { opacity: 0.4; filter: drop-shadow(0 0 5px #ff922b); }
+  50% { opacity: 1; filter: drop-shadow(0 0 35px #fd7e14); }
+  100% { opacity: 0.4; filter: drop-shadow(0 0 5px #ff922b); }
+}
+
+.bulb-pulse-yellow { animation: bulb_glow_yellow_after 1.5s infinite ease-in-out; }
+.bulb-pulse-red { animation: bulb_glow_red_after 1.4s infinite ease-in-out; }
+.bulb-pulse-blue { animation: bulb_glow_blue_after 1.7s infinite ease-in-out; }
+.bulb-pulse-green { animation: bulb_glow_green_after 1.8s infinite ease-in-out; }
+.bulb-pulse-pink { animation: bulb_glow_pink_after 2s infinite ease-in-out; }
+.bulb-pulse-orange { animation: bulb_glow_orange_after 2.2s infinite ease-in-out; }
+
+/* Banner Drop & Swing */
+@keyframes bannar_come {
+  0% {
+    transform: translateY(-900px) rotate(-15deg);
+    opacity: 0;
+  }
+  35% {
+    transform: translateY(20px) rotate(10deg);
+    opacity: 1;
+  }
+  65% {
+    transform: translateY(-10px) rotate(-8deg);
+  }
+  85% {
+    transform: translateY(5px) rotate(4deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.banner-animated {
+  animation: bannar_come 4.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Balloon sway animations */
+@keyframes balloons_rotate_one {
+  0% { transform: rotate(20deg); }
+  50% { transform: rotate(-20deg); }
+  100% { transform: rotate(20deg); }
+}
+
+@keyframes balloons_rotate_two {
+  0% { transform: rotate(-16deg); }
+  50% { transform: rotate(18deg); }
+  100% { transform: rotate(-16deg); }
+}
+
+.balloon-sway-1 {
+  animation: balloons_rotate_one 6s ease-in-out infinite;
+}
+
+.balloon-sway-2 {
+  animation: balloons_rotate_two 7s ease-in-out infinite;
+}
+
+/* Candle Flame Animations */
+@keyframes fuego {
+  0% {
+    background: rgba(254, 248, 97, 0.7);
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 30px 10px rgba(255, 180, 0, 0.6);
+  }
+  50% {
+    background: rgba(255, 60, 0, 0.25);
+    transform: translateY(-45px) scale(0.2);
+    box-shadow: 0 0 50px 20px rgba(255, 100, 0, 0.3);
+  }
+  100% {
+    background: rgba(254, 248, 97, 0.7);
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 30px 10px rgba(255, 180, 0, 0.6);
+  }
+}
+
+.flame-1 { animation: fuego 2s infinite ease-in-out; }
+.flame-2 { animation: fuego 1.5s infinite ease-in-out; }
+.flame-3 { animation: fuego 1.1s infinite ease-in-out; }
+.flame-4 { animation: fuego 0.7s infinite ease-in-out; }
+.flame-5 { animation: fuego 0.35s infinite ease-in-out; }
+
+/* Font classes */
+.font-happy {
+  font-family: 'Happy', 'Signika', cursive, sans-serif;
+}
+
+.font-signika {
+  font-family: 'Signika', sans-serif;
+}
+
+.font-halloween {
+  font-family: 'Halloween', cursive, sans-serif;
+}
