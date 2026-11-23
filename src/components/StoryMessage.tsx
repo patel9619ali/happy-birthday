@@ -156,7 +156,7 @@ export const StoryMessage: React.FC<StoryMessageProps> = ({
       </div>
 
       {/* Main Animated Message Typography */}
-      <div className="min-h-[140px] sm:min-h-[180px] flex items-center justify-center text-center max-w-4xl px-2">
+      <div className="min-h-[150px] sm:min-h-[180px] flex items-center justify-center text-center max-w-4xl px-2">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -170,7 +170,7 @@ export const StoryMessage: React.FC<StoryMessageProps> = ({
             className="flex flex-col items-center"
           >
             <h2
-              className={`font-happy text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide leading-tight ${
+              className={`font-happy text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide leading-tight ${
                 isFinal ? "text-[#C4515C] animate-pulse" : "text-[#C4515C]"
               }`}
               style={{

@@ -3,7 +3,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Sparkles, Flame } from "lucide-react";
+import { Sparkles, Flame, ZoomIn } from "lucide-react";
 import { fireCelebrationConfetti } from "@/lib/confetti";
 
 interface BirthdayCakeProps {
@@ -11,6 +11,7 @@ interface BirthdayCakeProps {
   candleLit: boolean;
   onToggleFlame?: () => void;
   personImage?: string;
+  onSelectPhoto?: (src: string) => void;
 }
 
 export const BirthdayCake: React.FC<BirthdayCakeProps> = ({
@@ -18,6 +19,7 @@ export const BirthdayCake: React.FC<BirthdayCakeProps> = ({
   candleLit,
   onToggleFlame,
   personImage = "/assets/images/person.jpeg",
+  onSelectPhoto,
 }) => {
   return (
     <AnimatePresence>
@@ -95,17 +97,27 @@ export const BirthdayCake: React.FC<BirthdayCakeProps> = ({
             animate={{ opacity: 1, scale: 1, rotate: 6 }}
             transition={{ delay: 0.3, type: "spring", stiffness: 120 }}
             whileHover={{ scale: 1.08, rotate: 0 }}
-            className="absolute bottom-6 -right-16 sm:-right-24 w-32 sm:w-36 h-32 sm:h-36 p-2 bg-white rounded-2xl shadow-[0_12px_30px_rgba(0,0,0,0.35)] border-4 border-white z-20 cursor-pointer"
-            onClick={() => fireCelebrationConfetti()}
+            className="absolute bottom-6 -right-16 sm:-right-24 w-32 sm:w-36 h-32 sm:h-36 p-2 bg-white rounded-2xl shadow-[0_12px_30px_rgba(0,0,0,0.35)] border-4 border-white z-20 cursor-pointer group"
+            onClick={() => {
+              fireCelebrationConfetti();
+              if (onSelectPhoto) {
+                onSelectPhoto(personImage);
+              }
+            }}
           >
             <div className="relative w-full h-full overflow-hidden rounded-xl bg-pink-100">
               <Image
                 src={personImage}
                 alt="Birthday Person"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 priority
               />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center">
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-black/60 text-white text-xs px-2.5 py-1 rounded-full flex items-center gap-1 backdrop-blur-xs shadow-md">
+                  <ZoomIn className="w-3.5 h-3.5" /> Zoom
+                </span>
+              </div>
             </div>
             <div className="absolute -top-3 -right-2 bg-rose-500 text-white rounded-full p-1 shadow-md">
               <Sparkles className="w-3.5 h-3.5" />

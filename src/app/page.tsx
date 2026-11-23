@@ -12,7 +12,10 @@ import { PhotoLightbox } from "@/components/PhotoLightbox";
 import { FloatingParticles } from "@/components/FloatingParticles";
 import { fireCelebrationConfetti, fireHeartConfetti } from "@/lib/confetti";
 
-const ALBUM_PHOTOS = [
+const PERSON_IMAGE = "/assets/images/person.jpeg";
+
+const ALL_PHOTOS = [
+  { src: PERSON_IMAGE, alt: "Birthday Person" },
   { src: "/assets/images/photo1.png", alt: "Special Moment 1" },
   { src: "/assets/images/photo2.jpeg", alt: "Special Moment 2" },
   { src: "/assets/images/photo3.jpeg", alt: "Special Moment 3" },
@@ -166,9 +169,10 @@ export default function BirthdayPage() {
         {/* Polaroid Album Photos */}
         <AlbumPhotos
           show={currentStep >= 3}
-          onSelectPhoto={(src, index) => {
+          onSelectPhoto={(src) => {
+            const idx = ALL_PHOTOS.findIndex((p) => p.src === src);
             setSelectedPhoto(src);
-            setSelectedPhotoIndex(index);
+            setSelectedPhotoIndex(idx >= 0 ? idx : 0);
           }}
         />
 
@@ -184,7 +188,12 @@ export default function BirthdayPage() {
             showCake={currentStep >= 5 && (currentStep !== 8 || candleLit)}
             candleLit={candleLit}
             onToggleFlame={() => setCandleLit((prev) => !prev)}
-            personImage="/assets/images/person.jpeg"
+            personImage={PERSON_IMAGE}
+            onSelectPhoto={(src) => {
+              const idx = ALL_PHOTOS.findIndex((p) => p.src === src);
+              setSelectedPhoto(src);
+              setSelectedPhotoIndex(idx >= 0 ? idx : 0);
+            }}
           />
         </div>
 
@@ -221,17 +230,17 @@ export default function BirthdayPage() {
       <PhotoLightbox
         selectedPhoto={selectedPhoto}
         photoIndex={selectedPhotoIndex}
-        photos={ALBUM_PHOTOS}
+        photos={ALL_PHOTOS}
         onClose={() => setSelectedPhoto(null)}
         onNext={() => {
-          const nextIdx = (selectedPhotoIndex + 1) % ALBUM_PHOTOS.length;
+          const nextIdx = (selectedPhotoIndex + 1) % ALL_PHOTOS.length;
           setSelectedPhotoIndex(nextIdx);
-          setSelectedPhoto(ALBUM_PHOTOS[nextIdx].src);
+          setSelectedPhoto(ALL_PHOTOS[nextIdx].src);
         }}
         onPrev={() => {
-          const prevIdx = (selectedPhotoIndex - 1 + ALBUM_PHOTOS.length) % ALBUM_PHOTOS.length;
+          const prevIdx = (selectedPhotoIndex - 1 + ALL_PHOTOS.length) % ALL_PHOTOS.length;
           setSelectedPhotoIndex(prevIdx);
-          setSelectedPhoto(ALBUM_PHOTOS[prevIdx].src);
+          setSelectedPhoto(ALL_PHOTOS[prevIdx].src);
         }}
       />
     </main>

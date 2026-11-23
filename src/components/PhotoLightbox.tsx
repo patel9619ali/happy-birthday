@@ -49,7 +49,7 @@ export const PhotoLightbox: React.FC<PhotoLightboxProps> = ({
           <div className="absolute top-4 inset-x-4 sm:inset-x-8 flex items-center justify-between text-white z-60 pointer-events-none">
             <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm pointer-events-auto border border-white/10 text-xs sm:text-sm">
               <Heart className="w-4 h-4 text-rose-500 fill-rose-500" />
-              <span>Memory {photoIndex + 1} of {photos.length}</span>
+              <span>{photos[photoIndex]?.alt || "Photo"} ({photoIndex + 1} of {photos.length})</span>
             </div>
 
             <button
@@ -97,7 +97,7 @@ export const PhotoLightbox: React.FC<PhotoLightboxProps> = ({
             <div className="relative w-full h-[55vh] sm:h-[65vh] rounded-xl overflow-hidden bg-neutral-900">
               <Image
                 src={selectedPhoto}
-                alt="Enlarged Memory Photo"
+                alt={photos[photoIndex]?.alt || "Enlarged Memory Photo"}
                 fill
                 sizes="(max-width: 1024px) 90vw, 800px"
                 className="object-contain"
