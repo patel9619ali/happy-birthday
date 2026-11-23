@@ -13,10 +13,10 @@ import { FloatingParticles } from "@/components/FloatingParticles";
 import { fireCelebrationConfetti, fireHeartConfetti } from "@/lib/confetti";
 
 const ALBUM_PHOTOS = [
-  { src: "/assets/images/photo1.jpg", alt: "Special Moment 1" },
-  { src: "/assets/images/photo2.jpg", alt: "Special Moment 2" },
-  { src: "/assets/images/photo3.jpg", alt: "Special Moment 3" },
-  { src: "/assets/images/photo4.jpg", alt: "Special Moment 4" },
+  { src: "/assets/images/photo1.png", alt: "Special Moment 1" },
+  { src: "/assets/images/photo2.png", alt: "Special Moment 2" },
+  { src: "/assets/images/photo3.png", alt: "Special Moment 3" },
+  { src: "/assets/images/photo4.png", alt: "Special Moment 4" },
 ];
 
 export default function BirthdayPage() {
@@ -184,7 +184,7 @@ export default function BirthdayPage() {
             showCake={currentStep >= 5 && (currentStep !== 8 || candleLit)}
             candleLit={candleLit}
             onToggleFlame={() => setCandleLit((prev) => !prev)}
-            personImage="/assets/images/person.png"
+            personImage="/assets/images/person.jpeg"
           />
         </div>
 

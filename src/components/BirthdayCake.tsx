@@ -17,7 +17,7 @@ export const BirthdayCake: React.FC<BirthdayCakeProps> = ({
   showCake,
   candleLit,
   onToggleFlame,
-  personImage = "/assets/images/person.png",
+  personImage = "/assets/images/person.jpeg",
 }) => {
   return (
     <AnimatePresence>

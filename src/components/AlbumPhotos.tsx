@@ -13,7 +13,7 @@ interface AlbumPhotosProps {
 const PHOTOS = [
   {
     id: 1,
-    src: "/assets/images/photo1.jpg",
+    src: "/assets/images/photo1.png",
     alt: "Precious Memory 1",
     side: "left",
     positionClasses: "top-20 sm:top-24 left-2 sm:left-8 md:left-14",
@@ -21,7 +21,7 @@ const PHOTOS = [
   },
   {
     id: 2,
-    src: "/assets/images/photo2.jpg",
+    src: "/assets/images/photo2.png",
     alt: "Precious Memory 2",
     side: "left",
     positionClasses: "top-72 sm:top-80 left-4 sm:left-12 md:left-20",
@@ -29,7 +29,7 @@ const PHOTOS = [
   },
   {
     id: 3,
-    src: "/assets/images/photo3.jpg",
+    src: "/assets/images/photo3.png",
     alt: "Precious Memory 3",
     side: "right",
     positionClasses: "top-20 sm:top-24 right-2 sm:right-8 md:right-14",
@@ -37,7 +37,7 @@ const PHOTOS = [
   },
   {
     id: 4,
-    src: "/assets/images/photo4.jpg",
+    src: "/assets/images/photo4.png",
     alt: "Precious Memory 4",
     side: "right",
     positionClasses: "top-72 sm:top-80 right-4 sm:right-12 md:right-20",
