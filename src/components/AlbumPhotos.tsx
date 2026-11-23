@@ -21,7 +21,7 @@ const PHOTOS = [
   },
   {
     id: 2,
-    src: "/assets/images/photo2.png",
+    src: "/assets/images/photo2.jpeg",
     alt: "Precious Memory 2",
     side: "left",
     positionClasses: "top-72 sm:top-80 left-4 sm:left-12 md:left-20",
@@ -29,7 +29,7 @@ const PHOTOS = [
   },
   {
     id: 3,
-    src: "/assets/images/photo3.png",
+    src: "/assets/images/photo3.jpeg",
     alt: "Precious Memory 3",
     side: "right",
     positionClasses: "top-20 sm:top-24 right-2 sm:right-8 md:right-14",
@@ -37,7 +37,7 @@ const PHOTOS = [
   },
   {
     id: 4,
-    src: "/assets/images/photo4.png",
+    src: "/assets/images/photo4.jpeg",
     alt: "Precious Memory 4",
     side: "right",
     positionClasses: "top-72 sm:top-80 right-4 sm:right-12 md:right-20",
@@ -98,7 +98,7 @@ export const AlbumPhotos: React.FC<AlbumPhotosProps> = ({ show, onSelectPhoto })
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.2, duration: 0.5 }}
-            className="fixed hidden lg:block top-[480px] right-12 z-20 pointer-events-none"
+            className="fixed lg:block top-[480px] right-12 z-20 pointer-events-none"
           >
             <div className="relative w-40 sm:w-48 h-auto drop-shadow-md animate-bounce">
               <Image

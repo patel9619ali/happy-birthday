@@ -112,7 +112,7 @@ export const StoryMessage: React.FC<StoryMessageProps> = ({
   const isFinal = currentIndex === messages.length - 1;
 
   return (
-    <div className="fixed inset-x-0 bottom-24 sm:bottom-28 z-35 flex flex-col items-center justify-center px-4 pointer-events-none select-none">
+    <div className="fixed inset-x-0 bottom-40 sm:bottom-28 z-35 flex flex-col items-center justify-center px-4 pointer-events-none select-none">
       {/* Progress pill & mini-controls */}
       <div className="pointer-events-auto flex items-center gap-3 bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 mb-4 shadow-lg text-xs text-white/80">
         <span>

@@ -14,9 +14,9 @@ import { fireCelebrationConfetti, fireHeartConfetti } from "@/lib/confetti";
 
 const ALBUM_PHOTOS = [
   { src: "/assets/images/photo1.png", alt: "Special Moment 1" },
-  { src: "/assets/images/photo2.png", alt: "Special Moment 2" },
-  { src: "/assets/images/photo3.png", alt: "Special Moment 3" },
-  { src: "/assets/images/photo4.png", alt: "Special Moment 4" },
+  { src: "/assets/images/photo2.jpeg", alt: "Special Moment 2" },
+  { src: "/assets/images/photo3.jpeg", alt: "Special Moment 3" },
+  { src: "/assets/images/photo4.jpeg", alt: "Special Moment 4" },
 ];
 
 export default function BirthdayPage() {
