@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Play, Pause, SkipForward, SkipBack, Heart } from "lucide-react";
 import { fireCelebrationConfetti, fireHeartConfetti } from "@/lib/confetti";
 
-xport const DEFAULT_MESSAGES = [
+export const DEFAULT_MESSAGES = [
   "To My Dearest to be ❤️ Wiffey 💍✨",
   "Nida ❤️🥰",
   "Today is... 🌅",
