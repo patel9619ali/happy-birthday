@@ -106,7 +106,7 @@ export const PhotoLightbox: React.FC<PhotoLightboxProps> = ({
             </div>
 
             <p className="mt-3 text-xs sm:text-sm text-neutral-600 font-medium tracking-wide">
-              Click anywhere outside or press Esc to close • Arrow keys to browse
+              My Princess, My Queen Nida! Click anywhere outside or press Esc to close.
             </p>
           </motion.div>
         </motion.div>
