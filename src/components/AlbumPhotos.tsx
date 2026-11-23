@@ -69,7 +69,7 @@ export const AlbumPhotos: React.FC<AlbumPhotosProps> = ({ show, onSelectPhoto })
                 transition: { duration: 0.25 },
               }}
               onClick={() => onSelectPhoto(photo.src, index)}
-              className={`fixed hidden lg:block ${photo.positionClasses} z-10 cursor-pointer group`}
+              className={`fixed lg:block ${photo.positionClasses} z-10 cursor-pointer group`}
             >
               <div className="relative p-2.5 sm:p-3 bg-white rounded-xl shadow-[0_12px_30px_rgba(0,0,0,0.35)] transition-shadow group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] border border-neutral-100">
                 {/* Vintage tape effect on top */}
