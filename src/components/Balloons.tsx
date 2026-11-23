@@ -24,10 +24,10 @@ const DEFAULT_BALLOONS: BalloonData[] = [
   { id: 1, letter: "H", color: "#F2B300", img: "/assets/images/balloons/b1.png", baseRotate: 15, swayClass: "balloon-sway-1" },
   { id: 2, letter: "B", color: "#0719D4", img: "/assets/images/balloons/b2.png", baseRotate: -12, swayClass: "balloon-sway-2" },
   { id: 3, letter: "D", color: "#D14D39", img: "/assets/images/balloons/b3.png", baseRotate: -10, swayClass: "balloon-sway-2" },
-  { id: 4, letter: "B", color: "#8FAD00", img: "/assets/images/balloons/b4.png", baseRotate: 14, swayClass: "balloon-sway-1" },
-  { id: 5, letter: "A", color: "#8377E4", img: "/assets/images/balloons/b5.png", baseRotate: 12, swayClass: "balloon-sway-1" },
-  { id: 6, letter: "B", color: "#99C96A", img: "/assets/images/balloons/b6.png", baseRotate: -14, swayClass: "balloon-sway-2" },
-  { id: 7, letter: "Y", color: "#20CFB4", img: "/assets/images/balloons/b7.png", baseRotate: 16, swayClass: "balloon-sway-1" },
+  { id: 4, letter: "N", color: "#8FAD00", img: "/assets/images/balloons/b4.png", baseRotate: 14, swayClass: "balloon-sway-1" },
+  { id: 5, letter: "I", color: "#8377E4", img: "/assets/images/balloons/b5.png", baseRotate: 12, swayClass: "balloon-sway-1" },
+  { id: 6, letter: "D", color: "#99C96A", img: "/assets/images/balloons/b6.png", baseRotate: -14, swayClass: "balloon-sway-2" },
+  { id: 7, letter: "A", color: "#20CFB4", img: "/assets/images/balloons/b7.png", baseRotate: 16, swayClass: "balloon-sway-1" },
 ];
 
 export const Balloons: React.FC<BalloonsProps> = ({

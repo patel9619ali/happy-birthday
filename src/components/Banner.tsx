@@ -30,7 +30,7 @@ export const Banner: React.FC<BannerProps> = ({ show }) => {
         >
           <div className="relative w-full max-w-xl sm:max-w-2xl md:max-w-3xl drop-shadow-[0_10px_20px_rgba(0,0,0,0.35)]">
             <Image
-              src="/assets/images/banner.png"
+              src="/assets/images/Happy_Birthday_Nida_Banner.png"
               alt="Happy Birthday Banner"
               width={1200}
               height={400}
